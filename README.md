@@ -1,17 +1,38 @@
-# E-commerce-Product-Recommendation-System
-An E-Commerce Product Recommendation Project which takes on 3 approaches to the solution. It involves Singular Value Decomposition, Correlation and k-Means Clustering algorithms.
+# E-commerce Product Recommendation System
+This project implements three recommendation system approaches to personalize product suggestions for an e-commerce platform. By leveraging user purchase history, product ratings, and item popularity, the system aims to  enhance customer experience and drive sales.
 
-The recommendation system is designed in 3 parts based on the business context:
+## Key Approaches
 
-Recommendation system part I: Product popularity based system targetted at new customers
+**Recommendation System Part I**: Popularity-Based (For New Customers)
 
-Recommendation system part II: Model-based collaborative filtering system based on customer's purchase history and ratings provided by other users who bought items similar items
+Identifies most popular products based on sales data.
+Targets new customers with limited purchase history.
 
-Recommendation system part III: When a business is setting up its e-commerce website for the first time withou any product rating
+**Recommendation System Part II**: Model-Based Collaborative Filtering
 
-When a new customer without any previous purchase history visits the e-commerce website for the first time, he/she is recommended the most popular products sold on the company's website. Once, he/she makes a purchase, the recommendation system updates and recommends other products based on the purchase history and ratings provided by other users on the website. The latter part is done using collaborative filtering techniques.
+Analyzes user purchase history and item ratings to identify similar user behavior.
+Recommends products based on past purchases and preferences of similar users.
+Leverages techniques like Singular Value Decomposition (SVD) or Correlation analysis.
 
-The data sets are from
+**Recommendation System Part III**: Recommendation for New Businesses
+
+Addresses the scenario where a new e-commerce website lacks product ratings.
+Employs techniques like k-Means Clustering to group similar products based on item descriptions.
+Recommends products within the same cluster as the customer's initial selection.
+
+## Data
+The project utilizes datasets from:
 
 Amazon product ratings by multipe users, Data Source: https://www.kaggle.com/skillsmuggler/amazon-ratings
+
 Home Depot products with descriptions, Data Source: https://www.kaggle.com/c/home-depot-product-search-relevance/data
+
+
+## Usage
+Clone the repository.
+Install required dependencies (e.g., pandas, numpy, scikit-learn).
+Prepare the data (cleaning, preprocessing) according to your specific datasets.
+Run the desired recommendation system script.
+
+## Evaluation
+The system's effectiveness is evaluated using metrics like precision, recall, F1-score, and RMSE.
